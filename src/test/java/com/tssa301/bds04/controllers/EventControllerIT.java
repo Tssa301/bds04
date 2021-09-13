@@ -130,7 +130,7 @@ public class EventControllerIT {
 		
 		result.andExpect(status().isUnprocessableEntity());
 		result.andExpect(jsonPath("$.errors[0].fieldName").value("name"));
-		result.andExpect(jsonPath("$.errors[0].message").value("Campo requerido"));
+		result.andExpect(jsonPath("$.errors[0].message").value("Required field"));
 	}
 
 	@Test

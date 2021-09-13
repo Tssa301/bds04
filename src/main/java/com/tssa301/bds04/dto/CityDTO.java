@@ -2,12 +2,16 @@ package com.tssa301.bds04.dto;
 
 import java.io.Serializable;
 
+import javax.validation.constraints.NotBlank;
+
 import com.tssa301.bds04.entities.City;
 
 public class CityDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private Long id;
+	
+	@NotBlank(message = "Required field")
 	private String name;
 	
 	public CityDTO() {
